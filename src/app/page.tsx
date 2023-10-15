@@ -1,12 +1,13 @@
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Portfolio from "@/components/portfolio";
-
 export default function Home() {
   return (
     <div>
-      <Portfolio />
+      <div>
+        Who am i, what i do, call to action button and an awsome profile picture
+      </div>
+      <div>A small description about me and what i do</div>
+      <div>Areas of interest and Specializations</div>
+      <div>skills and technologies</div>
+      <div>Latest Projects</div>
     </div>
   );
 }

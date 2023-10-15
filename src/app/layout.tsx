@@ -1,8 +1,5 @@
-import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -20,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} container mx-auto`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
