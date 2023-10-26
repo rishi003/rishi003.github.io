@@ -30,7 +30,10 @@ export default function Projects() {
       className="mt-4 grid gap-8 grid-cols-1 md:grid-cols-2"
     >
       {projects.map((project) => (
-        <div className="flex flex-col gap-2 bg-gray-100 rounded-xl drop-shadow-2xl">
+        <div
+          className="flex flex-col gap-2 bg-gray-100 rounded-xl drop-shadow-2xl"
+          key={project.title}
+        >
           <div
             style={{ backgroundImage: `url(${project.image})` }}
             className="w-full h-64 bg-cover rounded-t-xl"

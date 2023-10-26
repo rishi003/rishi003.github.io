@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid gap-4">
             <p className="text-2xl">Hey,</p>
             <p className="font-bold text-4xl" style={{ fontFamily: "Poppins" }}>
-              I'm Rishabh
+              I&apos;m Rishabh
             </p>
             <p className="text-xl text-gray-400">
               I am a seasonsed software developer with a passion for data driven
@@ -98,12 +98,12 @@ export default function Home() {
         >
           <p>
             Some interesting facts about me. I love to read fiction, psychology
-            and philosophy. The last fiction I read was "The Hobbit" by J.R.R.
-            Tolkien. I also take pleasure in cooking and specialize in Indian
-            curries and beans. I also love to sing and make conversations with
-            people about all sorts of things. Other than taht, I cannot live
-            without learning something new every day and constantly improve my
-            understanding in the field of data analytics and engineering.
+            and philosophy. The last fiction I read was &quot;The Hobbit&quote;
+            by J.R.R. Tolkien. I also take pleasure in cooking and specialize in
+            Indian curries and beans. I also love to sing and make conversations
+            with people about all sorts of things. Other than taht, I cannot
+            live without learning something new every day and constantly improve
+            my understanding in the field of data analytics and engineering.
           </p>
           <br />
           <p>
@@ -126,7 +126,10 @@ export default function Home() {
           style={{ fontFamily: "Poppins" }}
         >
           {areasOfInterest.map((area) => (
-            <div className="flex flex-col gap-8 items-center p-12 rounded-xl">
+            <div
+              className="flex flex-col gap-8 items-center p-12 rounded-xl"
+              key={area.title}
+            >
               <FontAwesomeIcon icon={area.icon} size="2x" />
               <h4 className="text-xl text-bold tracking-wider">{area.title}</h4>
               <p className="text-gray-400 text-center">{area.description}</p>

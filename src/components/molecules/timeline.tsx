@@ -97,6 +97,7 @@ export default function Timeline() {
       <VerticalTimeline lineColor="#15b7a8">
         {experiences.map((experience) => (
           <VerticalTimelineElement
+            key={experience.title}
             className="vertical-timeline-element--work"
             contentArrowStyle={{ visibility: "hidden" }}
             date={experience.date}
@@ -119,7 +120,10 @@ export default function Timeline() {
               <div>{experience.responsibilities}</div>
               <div className="flex flex-wrap gap-2">
                 {experience.skills.map((skill) => (
-                  <span className="rounded-full bg-teal-500 py-2 px-4 text-sm text-white tracking-wider bg-gradient-to-r from-teal-500 to-blue-500">
+                  <span
+                    className="rounded-full bg-teal-500 py-2 px-4 text-sm text-white tracking-wider bg-gradient-to-r from-teal-500 to-blue-500"
+                    key={skill}
+                  >
                     {skill}
                   </span>
                 ))}
