@@ -61,7 +61,7 @@ export default function Home() {
               I&apos;m Rishabh
             </p>
             <p className="text-xl text-gray-400">
-              I am a seasonsed software developer with a passion for data driven
+              I am a seasoned software developer with a passion for data driven
               products.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
             and philosophy. The last fiction I read was &quot;The Hobbit&quote;
             by J.R.R. Tolkien. I also take pleasure in cooking and specialize in
             Indian curries and beans. I also love to sing and make conversations
-            with people about all sorts of things. Other than taht, I cannot
+            with people about all sorts of things. Other than that, I cannot
             live without learning something new every day and constantly improve
             my understanding in the field of data analytics and engineering.
           </p>
