@@ -8,7 +8,7 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-8 justify-between py-20 px-8 md:px-64 md:flex-row bg-blue-950">
+    <footer className="flex flex-col gap-8 justify-between py-20 px-8 lg:px-24 xl:px-80 md:flex-row bg-blue-950">
       <div className="flex flex-col gap-2">
         <h4
           className="text-3xl font-bold text-white tracking-wider"

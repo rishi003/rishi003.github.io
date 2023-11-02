@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   faArrowRight,
@@ -9,9 +10,10 @@ import {
   faLayerGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Heading from "@/components/molecules/heading";
-import Timeline from "@/components/molecules/timeline";
-import Projects from "@/components/molecules/projects";
+import Heading from "@/components/typography/heading";
+import Timeline from "@/components/timeline";
+import Projects from "@/components/portfolio";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const areasOfInterest = [
@@ -42,7 +44,7 @@ export default function Home() {
     {
       icon: faLayerGroup,
       title: "Parallel Computing",
-      description: "Spark and Hadoop are the best thing ever happend to data",
+      description: "Spark and Hadoop are the best thing ever happened to data",
     },
     {
       icon: faChartColumn,
@@ -53,7 +55,7 @@ export default function Home() {
   ];
   return (
     <div className="mt-4 md:mt-20 w-full grid gap-8">
-      <div className="grid gap-8 content-between mx-8 md:grid-cols-2 md:mx-80">
+      <div className="grid gap-8 content-between px-8 lg:px-24 xl:px-80 md:grid-cols-2">
         <div className="flex flex-col justify-center">
           <div className="grid gap-4">
             <p className="text-2xl">Hey,</p>
@@ -88,10 +90,10 @@ export default function Home() {
       </div>
 
       <div
-        className="flex flex-col gap-2 bg-gray-100 py-20 px-8 md:px-64"
+        className="flex flex-col gap-2 bg-gray-100 py-20 px-8 lg:px-24 xl:px-80"
         id="about"
       >
-        <Heading> SOMETHING PERSONAL</Heading>
+        <Heading level={2}>SOMETHING PERSONAL</Heading>
         <div
           className="text-justify ps-8 py-12 border-l-4 text-gray-600 border-teal-500"
           style={{ fontFamily: "Poppins" }}
@@ -100,10 +102,11 @@ export default function Home() {
             Some interesting facts about me. I love to read fiction, psychology
             and philosophy. The last fiction I read was &quot;The Hobbit&quote;
             by J.R.R. Tolkien. I also take pleasure in cooking and specialize in
-            Indian curries and beans. I also love to sing and make conversations
-            with people about all sorts of things. Other than that, I cannot
-            live without learning something new every day and constantly improve
-            my understanding in the field of data analytics and engineering.
+            Indian curries &#40;Kadhi&#41; and beans &#40;Rajma&#41;. I also
+            love to sing and make conversations with people about all sorts of
+            things. Other than that, I cannot live without learning something
+            new every day and constantly improve my understanding in the field
+            of data analytics and engineering.
           </p>
           <br />
           <p>
@@ -116,8 +119,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 py-20 px-8 md:px-64 text-center">
-        <Heading>Areas of Interest</Heading>
+      <div className="flex flex-col gap-2 py-20 px-8 lg:px-24 xl:px-80 text-center">
+        <Heading level={2}>Areas of Interest</Heading>
         <p className="text-gray-400" style={{ fontFamily: "Poppins" }}>
           Things I love working with and I am good at
         </p>
@@ -137,7 +140,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-2 py-20 px-8 bg-gray-100 md:px-64">
+      <div className="flex flex-col gap-2 py-20 px-8 bg-gray-100 lg:px-24 xl:px-80">
         <div className="flex justify-center flex-col gap-2 text-center">
           <Heading>Experience</Heading>
           <p className="text-gray-400" style={{ fontFamily: "Poppins" }}>
@@ -146,7 +149,10 @@ export default function Home() {
         </div>
         <Timeline />
       </div>
-      <div className="flex flex-col gap-2 py-20 px-8 md:px-64" id="projects">
+      <div
+        className="flex flex-col gap-2 py-20 px-8 lg:px-24 xl:px-80"
+        id="projects"
+      >
         <div className="flex justify-center flex-col gap-2">
           <Heading>Projects</Heading>
           <p className="text-gray-400" style={{ fontFamily: "Poppins" }}>

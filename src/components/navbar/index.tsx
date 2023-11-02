@@ -4,6 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faSave } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,15 +13,15 @@ export default function Navbar() {
   const navLinks = [
     {
       title: "ABOUT",
-      href: "#about",
+      href: "/#about",
     },
     {
       title: "PROJECTS",
-      href: "#projects",
+      href: "/#projects",
     },
     {
-      title: "MY BLOG",
-      href: "https://medium.com/@rishabh.awatani",
+      title: "SLIDES",
+      href: "/slides",
     },
   ];
 
@@ -40,13 +41,15 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-50">
       <div
-        className={`flex justify-between items-center py-4 bg-white px-8 md:px-64 duration-700 ${
+        className={`flex justify-between items-center py-4 bg-white px-8 xl:px-64 duration-700 ${
           !top && `drop-shadow-2xl`
         }`}
         style={{ fontFamily: "Poppins" }}
       >
-        <h1 className="text-3xl tracking-wide md:text-5xl">R. Awatani</h1>
-        <nav className="hidden md:flex items-center">
+        <a href="/">
+          <h1 className="text-3xl tracking-wide md:text-5xl">R. Awatani</h1>
+        </a>
+        <nav className="hidden lg:flex items-center">
           <ul className="flex space-x-12 text-lg tracking-wider">
             {navLinks.map((link) => (
               <li key={link.href} className="hover:text-teal-500 duration-300">
@@ -86,7 +89,7 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <button onClick={toggleMenu}>
             <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="2x" />
           </button>
@@ -94,7 +97,7 @@ export default function Navbar() {
       </div>
       <nav>
         {isOpen && (
-          <ul className="md:hidden flex flex-col space-y-4 text-lg tracking-wider px-8 bg-white py-8 text-end">
+          <ul className="lg:hidden flex flex-col space-y-4 text-lg tracking-wider px-8 bg-white py-8 text-end">
             {navLinks.map((link) => (
               <li
                 key={link.href}
